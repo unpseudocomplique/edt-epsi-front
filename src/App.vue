@@ -4,7 +4,7 @@ import { ref } from '@vue/reactivity';
 import Lesson from './components/lesson.vue';
 console.log('BASE_URL', BASE_URL);
 const agenda = ref()
-fetch(`http://localhost:8080/edt/mathieu.janio/10-04-21`)
+fetch(`${BASE_URL}/edt/mathieu.janio/10-04-21`)
   .then(response => response.json()).then(response => {
     console.log(response);
     agenda.value = response
