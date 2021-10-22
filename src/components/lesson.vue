@@ -5,13 +5,13 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="p-4 lesson-item rounded-lg shadow">
-        <p class="font-bold">{{ lesson.matiere }}</p>
+    <div class="p-4 lesson-item rounded-lg shadow-lg">
+        <p class="font-bold">{{ lesson.name }}</p>
         <div>
-            <i>{{ lesson.heure }}</i>
+            <i>{{ lesson.startHour }} - {{ lesson.endHour }}</i>
             <div class="flex justify-between">
-                <p>{{ lesson.prof }}</p>
-                <p>{{ lesson.salle }}</p>
+                <p>{{ lesson.teacher }}</p>
+                <p>{{ lesson.room }}</p>
             </div>
         </div>
     </div>
@@ -20,6 +20,6 @@ const props = defineProps({
 .lesson-item {
     width: 400px;
     max-width: 80vw;
-    background-color: v-bind(lesson.color);
+    background-color: #5030;
 }
 </style>
