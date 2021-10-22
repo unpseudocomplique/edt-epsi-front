@@ -3,7 +3,6 @@ import { BASE_URL } from '@/config'
 import { ref, watch } from 'vue';
 import dayjs from 'dayjs'
 import Lesson from './components/lesson.vue';
-<<<<<<< HEAD
 import { DatePicker } from 'v-calendar';
 const agenda = ref([])
 const date = ref(new Date())
@@ -23,15 +22,6 @@ watch(date,
     fetchData(newDate, user)
   }
 )
-=======
-console.log('BASE_URL', BASE_URL);
-const agenda = ref()
-fetch(`${BASE_URL}/edt/mathieu.janio/10-04-21`)
-  .then(response => response.json()).then(response => {
-    console.log(response);
-    agenda.value = response
-  })
->>>>>>> 206630d5b7f3c063527bcc5ab1132055b5003211
 </script>
 
 <template>
