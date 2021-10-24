@@ -7,9 +7,10 @@ import Lesson from './components/lesson.vue';
 import { DatePicker } from 'v-calendar';
 import { addColorsToLessons } from './services';
 import LoaderLesson from './components/loaderLesson.vue';
+import { useStorage } from '@vueuse/core'
 const agenda = ref([])
 const date = ref(new Date())
-const user = ref('mathieu.janio')
+const user = useStorage('username', '')
 const isLoading = ref(false)
 
 const fetchData = (newDate, newUser) => {
