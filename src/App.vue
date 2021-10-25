@@ -42,7 +42,7 @@ fetchData(range.value, user.value)
 <template>
   <div class="p-5">
     <h1 class="text-2xl text-gray-100">EDT EPSI</h1>
-    <div class="flex items-end mt-3">
+    <div class="flex items-end mt-3 flex-wrap">
       <label class="flex flex-col w-min mr-2">
         prénom.nom
         <input
