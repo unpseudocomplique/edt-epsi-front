@@ -8,11 +8,18 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		VitePWA({
-			includeAssets: ['favicon.ico', 'robot.txt'],
+			includeAssets: ['favicon.ico', 'epsilogo.webp'],
 			manifest: {
 				name: 'EDT',
 				short_name: 'EDT',
-				theme_color: '#374151'
+				theme_color: '#374151',
+				icons: [
+					{
+						src: 'epsilogo.webp',
+						sizes: '192x192',
+						type: 'image/webp',
+					},
+				]
 			},
 			registerType: 'autoUpdate'
 		})
