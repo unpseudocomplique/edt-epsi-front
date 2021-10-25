@@ -8,7 +8,7 @@ const props = defineProps({
     <div class="p-4 lesson-item rounded-lg shadow-lg bg-gray-800">
         <div class="flex items-center justify-between">
             <p class="font-bold">{{ lesson.name }}
-            <hr :style="`border-color:${lesson.color};`" class="lesson-underline mt-1 mb-2 border-2 rounded"></p>
+            <hr v-if="lesson.color" :style="`border-color:${lesson.color};`" class="lesson-underline mt-1 mb-2 border-2 rounded"></p>
             <!-- <div
                 :style="`background-color:${lesson.color};box-shadow: 0px 1px 4px #06101f7a;`"
                 class="rounded shadow-2xl w-4 h-4"
