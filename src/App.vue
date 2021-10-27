@@ -114,7 +114,7 @@ fetchData(range.value, user.value)
     </div>
     <div class="flex flex-wrap justify-start flex-row mt-10">
       <div class="mt-10 mx-5" v-for="day in agenda">
-        <h2 class="text-xl">{{ dayjs(day.formatedDay).locale('fr').format('dddd MMMM YYYY') }}</h2>
+        <h2 class="text-xl">{{ dayjs(day.formatedDay).locale('fr').format('dddd MM MMMM YYYY') }}</h2>
         <div v-if="!day.request.loading">
           <Lesson v-for="lesson in day.request.data" class="mt-2" :lesson="lesson" />
         </div>
